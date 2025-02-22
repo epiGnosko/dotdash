@@ -5,8 +5,8 @@ import sys
 import argparse
 
 def main():
-    parser = argparse.ArgumentParser(description="Translate between Morse code and text")
-    parser.add_argument("-r", action="store_true", help = "convert text to Morse code instead")
+    parser = argparse.ArgumentParser(description="A CLI Utility to translate from Morse code to Text.")
+    parser.add_argument("-r", action="store_true", help = "reverse the translation, convert text to Morse code instead")
     parser.add_argument("input", nargs="?", type=str, default=None, help = "The text or morse code to translate. If not provided, read from the stdin")
     args = parser.parse_args()
 
