@@ -1,20 +1,52 @@
-# Morse Translator
+# dotdash
 
 A program which can translate to and from morse code. accepts command line arguments as morse and returns text output and vice versa.
 
 ## Installation
 
-Paste the following commands in a linux terminal
+> [!NOTE]
+> You should have a working python3 installation to run the script
+
+### Linux/macOS
+
+Paste the following commands in your terminal.
 
 ```bash
 git clone https://github.com/Gurmukh-Singh-4253/dotdash.git
-cd dotdash
-sudo ./install.sh
+cd dotdash # Navigating into the cloned repo
 ```
 
-> [!NOTE]
-> You should have a working python3 installation to run the script
-> This script only works on linux systems for now.
+now you can install either via pip or run the installation script provided
+
+- Pip (recommended)
+```bash
+python3 -m venv venv 
+source venv/bin/activate
+pip install . # asking pip to install the command as a package in your system
+dotdash --help # testing the installation
+```
+
+<p align='center'>
+    OR
+</p>
+
+- Installation script
+```bash
+sudo ./install.sh # installs system-wide, will ask for your password
+dotdash --help # testing the installation
+```
+
+### Windows (Experimental, I did not have a windows machine to test this on, raise an issue if it does not work)
+
+Paste the underlying code into powershell
+
+```powershell 
+git clone https://github.com/Gurmukh-Singh-4253/dotdash.git
+cd dotdash 
+python -m venv venv
+venv\Scripts\activate
+pip install .
+```
 
 ## Usage
 
@@ -40,14 +72,9 @@ You can give input in any format:
     ```
 - Read from stdin
     ```bash
-    $ dotdash -r
-    Hello world
+    $ dotdash
     .... . .-.. .-.. --- / .-- --- .-. .-.. -.. 
-    ```
-- pipe text to stdin
-    ```bash
-    $ echo "Hello world" | dotdash -r
-    .... . .-.. .-.. --- / .-- --- .-. .-.. -.. 
+    HELLO WORLD
     ```
 - read from file 
     ```bash
@@ -55,3 +82,24 @@ You can give input in any format:
     $ dotdash -r < hello.txt 
     .... . .-.. .-.. --- / .-- --- .-. .-.. -.. 
     ```
+- pipe text to stdin
+    ```bash
+    $ echo ".... . .-.. .-.. --- / .-- --- .-. .-.. -.." | dotdash
+    HELLO WORLD
+    ```
+
+## Uninstall
+
+To uninstall the utility
+
+- If installed via installation script
+
+```bash
+sudo ./uninstall.sh # removes the utility from your system
+```
+
+- If installed via pip
+
+```bash
+pip uninstall dotdash
+```
