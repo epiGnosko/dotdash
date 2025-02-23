@@ -20,7 +20,7 @@ def main():
                 else:
                     result = morse.MorsetoText(line)
 
-                print(result)
+                print(result, end="")
         except KeyboardInterrupt: # Handle Ctrl+C as well
             pass
 
@@ -30,7 +30,8 @@ def main():
         else:
             result = morse.MorsetoText(args.input)
 
-        print(result)
+        print(result, end="")
+    print()
 
 if __name__ == "__main__":
     main()
