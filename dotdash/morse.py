@@ -49,6 +49,10 @@ MtoL = {
     ".----.":	"\'",
     ".-..-.":	"\"",
 
+    "-.--.":	"(",
+    "-.--.-":	")",
+    "-.-.--":	'!',
+
     "\n":   "\n",
     "":     "",
 }
@@ -104,12 +108,18 @@ LtoM = {
     '\'':   ".----.",
     '"':    ".-..-.",
 
+    '(':    "-.--.",
+    ')':    "-.--.-",
+    '!':    "-.-.--",
+
     "\n":   "\n",
+
+
     "":     "",
 }
 
 def MorsetoText(morse: str) -> str:
-    processed_morse = morse.strip().split(" ")
+    processed_morse = morse.split(" ")
     out = ""
 
     for i in processed_morse:
@@ -123,6 +133,7 @@ def MorsetoText(morse: str) -> str:
 def TexttoMorse(text: str) -> str:
     out = ""
 
+    text = text
     for i in text:
         if i.upper() in LtoM:
             out += LtoM[i.upper()]

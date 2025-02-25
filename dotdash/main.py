@@ -31,7 +31,6 @@ def main():
             result = morse.MorsetoText(args.input)
 
         print(result, end="")
-    print()
 
 if __name__ == "__main__":
     main()
