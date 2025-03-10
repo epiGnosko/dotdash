@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+# Finalized Python version, no more bugs. Planned refactor to Rust.
+
 import morse
 import sys
 import argparse
