@@ -1,5 +1,6 @@
 mod morse;
-use std::io::{self, BufRead};
+#[allow(unused_imports)]
+use std::io::{BufRead};
 use clap::Parser;
 
 #[derive(Parser)]
