@@ -1,5 +1,13 @@
 # dotdash-rs
 
-> [!WARNING]
-> This is still under development, Kindly use the python branch (fully functional) for now! 
-> Thanks!
+The Rust version of my Morse Translation CLI. 
+
+## Installation
+
+### Linux/macOS
+
+### Windows(WIP)
+
+## Usage
+
+## uninstallation
