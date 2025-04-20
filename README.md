@@ -67,3 +67,6 @@ Download the binary from the releases section on GitHub and place it in ```/usr/
 ## Uninstallation
 
 - Simply remove the binary from ```/usr/bin```
+  ```bash
+  sudo rm /usr/bin/dotdash
+  ```
